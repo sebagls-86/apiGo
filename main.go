@@ -28,8 +28,8 @@ var (
 func init() {
 	ctx = context.TODO()
 
-	err := godotenv.Load()
-	if err != nil {
+	errorLoad := godotenv.Load()
+	if errorLoad != nil {
 		panic(err)
 	}
 
